@@ -17,6 +17,7 @@ export default function TextForm(props) {
     settext(newtext)
   }
 
+  
   const handlespeakclick = () =>{
     let msg = new SpeechSynthesisUtterance();
     msg.text = text;
