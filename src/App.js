@@ -63,6 +63,7 @@ function App() {
 
   return (
   <>
+
   <BrowserRouter>
   <Navbar title = 'Text Utils' homeText = 'Home' aboutText = 'About Us' mode = {mode} togglemode = {togglemode} btntext = {btntext} greenmode = {greenmode} greymode = {greymode} redmode = {redmode} />  
   <Alert alert = {alert}/>
@@ -73,6 +74,7 @@ function App() {
     </Routes> 
   </div>
   </BrowserRouter>
+  
   </>
   );
 }
