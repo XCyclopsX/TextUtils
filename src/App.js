@@ -40,6 +40,7 @@ function App() {
 
     }
   }
+  
   const greenmode = () =>{
 
       setMode('dark');
@@ -74,7 +75,7 @@ function App() {
     </Routes> 
   </div>
   </BrowserRouter>
-  
+
   </>
   );
 }
