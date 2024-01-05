@@ -47,11 +47,11 @@ export default function TextForm(props) {
         <div className="mb-3">
         <textarea style={{backgroundColor : props.mode === 'dark'?'grey':'white', color: props.mode === 'dark'?'white':'#042743'}} className="form-control" value={text} placeholder='Enter Text' onChange={handleonchange} id="Box" rows="8"></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleupclick}>Move to upper case</button>
-        <button className="btn btn-primary mx-2" onClick={handleloclick}>Move to lower case</button>
-        <button className="btn btn-primary mx-2" onClick={handleclearclick}>Click to clear text</button>
-        <button className="btn btn-primary mx-2" onClick={handlecopyclick}>Click to copy text</button>
-        <button className="btn btn-success mx-2" onClick={handlespeakclick}>Click to speak</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleupclick}>Move to upper case</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleloclick}>Move to lower case</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleclearclick}>Click to clear text</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handlecopyclick}>Click to copy text</button>
+        <button className="btn btn-success mx-2 my-2" onClick={handlespeakclick}>Click to speak</button>
     </div>
     <div className="conatiner" style={{color: props.mode === 'dark'?'white':'#042743'}}>
         <h2>Your Text Summary</h2>
