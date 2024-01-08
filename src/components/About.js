@@ -1,41 +1,22 @@
-import React,{useState} from 'react'
+import React from 'react'
 
-export default function About() {
+export default function About(props) {
 
-    const [ mystyle, setMyStyle ] = useState(
-        {
-            color: 'black',
-            backgroundColor: 'white'
-        });
-    
-    const [ btntext, MyBtnText ] = useState("Enable Dark Mode")
+    // const [ mystyle, setMyStyle ] = useState(
+    //     {
+    //         color: 'black',
+    //         backgroundColor: 'white'
+    //     });
 
-    const togglestyle = () =>{
-        if(mystyle.color === 'black'){
-            setMyStyle({
-
-                color: 'white',
-                backgroundColor: 'black',
-                border: '2px solid white'
-                
-            })
-            MyBtnText('Enable Light Mode')
-        }
-        else{
-            setMyStyle({
-
-                color: 'black',
-                backgroundColor: 'white'
-
-            })
-            MyBtnText('Enable Dark Mode')
-        }
-
+    let mystyle = {
+        color : props.mode === 'dark' ? 'white' : 'black',
+        backgroundColor : props.mode === 'dark' ? 'black': 'white'
+        
     }
 
   return (
-    <div className='container my-2' style={mystyle}>
-        <h1 className='my-2'>About Us</h1>
+    <div className='container my-2' >
+        <h1 className='my-2' style={{color : props.mode === 'dark' ? 'white' : 'black'}}>About Us</h1>
       <div className="accordion" id="accordionExample">
             <div className="accordion-item">
                 <h2 className="accordion-header">
@@ -72,12 +53,6 @@ export default function About() {
                     <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                 </div>
                 </div>
-            </div>
-        </div>
-        <div className="container my-2">
-            <div className="form-check form-switch">
-                <input onClick={togglestyle} className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{btntext}</label>
             </div>
         </div>
     </div>

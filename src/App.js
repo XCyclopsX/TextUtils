@@ -71,7 +71,7 @@ function App() {
   <div className="container my-3">
     <Routes>
       <Route exact path='/TextUtils' element = {<TextForm heading = 'Enter the text to analyse below' mode = {mode} showalert = {showalert}/>}></Route>
-      <Route exact path='/About' element = {<About/>}></Route>
+      <Route exact path='/About' element = {<About mode = {mode} greenmode = {greenmode} greymode = {greymode} redmode = {redmode}/>}></Route>
     </Routes> 
   </div>
   </BrowserRouter>
